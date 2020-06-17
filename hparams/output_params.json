@@ -1,0 +1,6 @@
+{
+     "tfrecords_dirs": "/Users/gongbing/PycharmProjects/video_prediction_savp/data/era5_size_64_64_3_3t_norm",
+    "context_frames": 10,
+    "sequence_length": 20,
+}
+
