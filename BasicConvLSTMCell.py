@@ -79,9 +79,9 @@ class BasicConvLSTMCell(ConvRNNCell):
     def output_size(self):
         return self._num_units
 
-    def __call__(self, inputs, state, scope=None):
+    def __call__(self, inputs, state, scope=None, reuse=False):
         """Long short-term memory cell (LSTM)."""
-        with tf.variable_scope(scope or type(self).__name__):  # "BasicLSTMCell"
+        with tf.variable_scope(scope or type(self).__name__,reuse=reuse):  # "BasicLSTMCell"
             # Parameters of gates are concatenated into one multiply for efficiency.
             if self._state_is_tuple:
                 c, h = state
